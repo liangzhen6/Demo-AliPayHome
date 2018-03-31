@@ -12,5 +12,5 @@
 
 + (id)custrmNav;
 
-
+- (void)updateAlpha:(float)alpha;
 @end

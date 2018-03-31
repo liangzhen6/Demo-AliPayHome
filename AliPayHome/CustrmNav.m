@@ -31,15 +31,21 @@
 
 - (void)updateAlpha:(float)alpha {
     //上部分
-    _sao.alpha = alpha;
-    _pay.alpha = alpha;
-    _plusup.alpha = alpha;
-    _get.alpha = alpha;
-    _search.alpha = alpha;
+    _sao.alpha = (alpha-0.5) * 2;
+    _pay.alpha = (alpha-0.5) * 2;
+    _plusup.alpha = (alpha-0.5) * 2;
+    _get.alpha = (alpha-0.5) * 2;
+    _search.alpha = (alpha-0.5) * 2;
     //下部分
-    _searchBar.alpha = 1 - alpha;
-    _plusdown.alpha = 1 - alpha;
-    _firend.alpha = 1 - alpha;
+    _searchBar.alpha = 1 - alpha * 2;
+    _plusdown.alpha = 1 - alpha * 2;
+    _firend.alpha = 1 - alpha * 2;
+    //当滑到一定的位置，背景变成有色
+    if (alpha >= 1.0) {
+        self.backgroundColor = MP_RGBColor(27, 107, 200);
+    } else {
+        self.backgroundColor = [UIColor clearColor];
+    }
 }
 
 

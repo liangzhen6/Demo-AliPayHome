@@ -15,6 +15,6 @@
 
 - (void)tableViewSlide:(CGFloat)slide;
 
-- (void)tabViewEndSlide;
+- (void)tabViewEndSlide:(CGFloat)slide scrollView:(UIScrollView *)scrollView;
 
 @end

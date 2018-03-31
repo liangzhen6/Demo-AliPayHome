@@ -134,7 +134,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.1058823529" green="0.41960784309999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Fi9-BI-iaz" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.25" id="A6m-xn-GNe"/>
                 <constraint firstItem="hFf-6B-8zR" firstAttribute="leading" secondItem="kT5-b8-qxX" secondAttribute="trailing" id="D3e-Gl-lRx"/>

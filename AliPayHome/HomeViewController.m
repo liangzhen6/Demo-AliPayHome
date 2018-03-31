@@ -35,6 +35,7 @@
 
 - (void)initView {
     CustrmNav * nav = [CustrmNav custrmNav];
+//    [self.view addSubview:nav];
     
     NavBarBottomView * navBottom = [NavBarBottomView navBarBottomView];
     navBottom.frame = CGRectMake(0, CGRectGetMaxY(nav.frame), Screen_Width, 80);
@@ -57,9 +58,24 @@
     _tableView.backgroundColor = [UIColor clearColor];
 //    [self.view insertSubview:_tableView belowSubview:tabHeader];
     [self.view addSubview:_tableView];
+    
     //放在顶层的 nav 应在在最外层的view
     [self.view addSubview:nav];
-    [tabHeader handleanGesture:_tableView];
+    
+    //增加背景色View
+    UIView * backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, contentY)];
+    backView.backgroundColor = MP_RGBColor(27, 107, 200);
+    [self.view insertSubview:backView atIndex:0];
+    
+//    [tabHeader handleanGesture:_tableView];
+//    UIRefreshControl * refreshC = [[UIRefreshControl alloc] init];
+//    refreshC.attributedTitle = [[NSAttributedString alloc] initWithString:@"hello"];
+//    refreshC.tintColor = [UIColor redColor];
+//    if (@available(iOS 10.0, *)) {
+//        _tableView.refreshControl = refreshC;
+//    } else {
+//        // Fallback on earlier versions
+//    }
     
     [[SlideManger shareSlideManger] slideMangerCustomNav:nav navBottm:navBottom tabHeader:tabHeader];
 }
@@ -95,7 +111,19 @@
 //    NSLog(@"===%f",contentOffsetY);
     [[SlideManger shareSlideManger] tableViewSlide:contentOffsetY];
 }
-
+//停止滚动后调用
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    CGFloat contentOffsetY = scrollView.contentOffset.y;
+    [[SlideManger shareSlideManger] tabViewEndSlide:contentOffsetY scrollView:scrollView];
+}
+//用户松手后的调用
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (!decelerate) {
+        // 用户松手后不会再滑动了
+        CGFloat contentOffsetY = scrollView.contentOffset.y;
+        [[SlideManger shareSlideManger] tabViewEndSlide:contentOffsetY scrollView:scrollView];
+    }
+}
 
 - (NSMutableArray *)dataSource {
     if (_dataSource == nil) {

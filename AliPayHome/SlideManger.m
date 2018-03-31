@@ -8,10 +8,12 @@
 
 #import "SlideManger.h"
 #import <UIKit/UIKit.h>
+#import "CustrmNav.h"
+#import "NavBarBottomView.h"
 @interface SlideManger ()<NSCopying, NSMutableCopying>
-@property(nonatomic,weak)UIView * navBottmView;
+@property(nonatomic,weak)NavBarBottomView * navBottmView;
 @property(nonatomic,weak)UIView * tabHeader;
-@property(nonatomic,weak)UIView * customNav;
+@property(nonatomic,weak)CustrmNav * customNav;
 
 @end
 static SlideManger * _slideManger = nil;
@@ -40,24 +42,44 @@ static SlideManger * _slideManger = nil;
 
 - (void)slideMangerCustomNav:(UIView *)customNav navBottm:(UIView *)navBottmView tabHeader:(UIView *)tabHeader {
     if (navBottmView) {
-        _navBottmView = navBottmView;
+        _navBottmView = (NavBarBottomView *)navBottmView;
     }
     if (tabHeader) {
         _tabHeader = tabHeader;
     }
     if (customNav) {
-        _customNav = customNav;
+        _customNav = (CustrmNav *)customNav;
     }
 }
-
+//滑动的时候
 - (void)tableViewSlide:(CGFloat)slide {
     if (_navBottmView && _tabHeader) {
         //得到真实的偏移量
         CGFloat slideY = slide + _navBottmView.height + _tabHeader.height;
-        NSLog(@"******%f",slideY);
+//        NSLog(@"******%f",slideY);
         [self handleTabHeader:slideY];
+        [self handleCustomNavNavBottom:slideY];
     }
 }
+//tableView 停止的时候
+- (void)tabViewEndSlide:(CGFloat)slide scrollView:(UIScrollView *)scrollView {
+    if (_navBottmView && _tabHeader) {
+        //得到真实的偏移量
+        CGFloat slideY = slide + _navBottmView.height + _tabHeader.height;
+        NSLog(@"******%f",slideY);
+        if (slideY > 0) {
+            if (slideY >= _customNav.height/2 && slideY < _customNav.height) {
+                //自动滑到上面
+                //            [scrollView scrollRectToVisible:CGRectMake(0, 0, 0, 0) animated:YES];
+                [scrollView setContentOffset:CGPointMake(0, -_tabHeader.height) animated:YES];
+            } else if (slideY < _customNav.height/2) {
+                //自动滑下去
+                [scrollView setContentOffset:CGPointMake(0, -(_navBottmView.height + _tabHeader.height)) animated:YES];
+            }
+        }
+    }
+}
+
 //处理 TabHeader 跟随 tableView 滑动
 - (void)handleTabHeader:(CGFloat)slide {
     if (slide >= 0) {
@@ -67,5 +89,24 @@ static SlideManger * _slideManger = nil;
     }
     
 }
+//处理customnav  的渐变色问题 以及navbottom 的位置 渐变色问题
+- (void)handleCustomNavNavBottom:(CGFloat)slide {
+    if (slide >= 0) {
+        CGFloat halfNavBottomH = _navBottmView.height/2;
+        CGFloat alpValue = (_navBottmView.height - slide)?(_navBottmView.height - slide):0;
+        [_navBottmView updateAlpha:alpValue/_navBottmView.height];
+        [_customNav updateAlpha:slide/_navBottmView.height];
+        if (slide<= _navBottmView.height) {
+            _navBottmView.y = _customNav.height - slide/2;
+        } else {
+            _navBottmView.y = _customNav.height - halfNavBottomH;
+        }
+    } else {
+        [_navBottmView updateAlpha:1.0];
+        [_customNav updateAlpha:0.0];
+        _navBottmView.y = _customNav.height;
+    }
+}
+
 
 @end

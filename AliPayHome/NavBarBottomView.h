@@ -11,4 +11,5 @@
 @interface NavBarBottomView : UIView
 + (id)navBarBottomView;
 
+- (void)updateAlpha:(float)alpha;
 @end
