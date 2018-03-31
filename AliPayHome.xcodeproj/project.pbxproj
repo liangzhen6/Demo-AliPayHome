@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FFEDC5C217DDB978396EDD6 /* libPods-AliPayHome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C311A1076C3569BE840580B /* libPods-AliPayHome.a */; };
+		8115B98BE9E444E7027E236D /* libPods-AliPayHomeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52DDC6CDC31204C8D66B6E97 /* libPods-AliPayHomeUITests.a */; };
+		8AD9AAF9CB3623462F4BFCC6 /* libPods-AliPayHomeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34CD6EDB177354DA735A442E /* libPods-AliPayHomeTests.a */; };
 		FA27DA9C206E293800A4BB2D /* UIView+MSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA27DA9B206E293800A4BB2D /* UIView+MSExtension.m */; };
 		FA27DA9F206E33A700A4BB2D /* CustrmNav.m in Sources */ = {isa = PBXBuildFile; fileRef = FA27DA9E206E33A700A4BB2D /* CustrmNav.m */; };
 		FA27DAA1206E33B400A4BB2D /* CustrmNav.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA27DAA0206E33B400A4BB2D /* CustrmNav.xib */; };
@@ -44,6 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34CD6EDB177354DA735A442E /* libPods-AliPayHomeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AliPayHomeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C311A1076C3569BE840580B /* libPods-AliPayHome.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AliPayHome.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52DDC6CDC31204C8D66B6E97 /* libPods-AliPayHomeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AliPayHomeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0B9441E16BD5D4B6F1E81C /* Pods-AliPayHomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliPayHomeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AliPayHomeUITests/Pods-AliPayHomeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5D2E01E6B25F54153D35AE76 /* Pods-AliPayHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliPayHome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AliPayHome/Pods-AliPayHome.debug.xcconfig"; sourceTree = "<group>"; };
+		8CE669DFFB594F65CD347715 /* Pods-AliPayHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliPayHomeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AliPayHomeTests/Pods-AliPayHomeTests.release.xcconfig"; sourceTree = "<group>"; };
+		B25E5D2551F7479DC235302D /* Pods-AliPayHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliPayHomeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AliPayHomeUITests/Pods-AliPayHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3D314B6BF7EA912BBBF713F /* Pods-AliPayHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliPayHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-AliPayHome/Pods-AliPayHome.release.xcconfig"; sourceTree = "<group>"; };
+		F86BA46E7CB5470D41EB1F5B /* Pods-AliPayHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliPayHomeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AliPayHomeTests/Pods-AliPayHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA27DA99206E27BE00A4BB2D /* AliHome.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliHome.pch; sourceTree = "<group>"; };
 		FA27DA9A206E293800A4BB2D /* UIView+MSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MSExtension.h"; sourceTree = "<group>"; };
 		FA27DA9B206E293800A4BB2D /* UIView+MSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MSExtension.m"; sourceTree = "<group>"; };
@@ -83,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFEDC5C217DDB978396EDD6 /* libPods-AliPayHome.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD9AAF9CB3623462F4BFCC6 /* libPods-AliPayHomeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,12 +111,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8115B98BE9E444E7027E236D /* libPods-AliPayHomeUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E73A58421B2C156ACBEE5D83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C311A1076C3569BE840580B /* libPods-AliPayHome.a */,
+				34CD6EDB177354DA735A442E /* libPods-AliPayHomeTests.a */,
+				52DDC6CDC31204C8D66B6E97 /* libPods-AliPayHomeUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9D9A0C26C83E3442A1BD77E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D2E01E6B25F54153D35AE76 /* Pods-AliPayHome.debug.xcconfig */,
+				E3D314B6BF7EA912BBBF713F /* Pods-AliPayHome.release.xcconfig */,
+				F86BA46E7CB5470D41EB1F5B /* Pods-AliPayHomeTests.debug.xcconfig */,
+				8CE669DFFB594F65CD347715 /* Pods-AliPayHomeTests.release.xcconfig */,
+				B25E5D2551F7479DC235302D /* Pods-AliPayHomeUITests.debug.xcconfig */,
+				5A0B9441E16BD5D4B6F1E81C /* Pods-AliPayHomeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FAB61369206DDF7500D55CC1 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +148,8 @@
 				FAB6138D206DDF7600D55CC1 /* AliPayHomeTests */,
 				FAB61398206DDF7600D55CC1 /* AliPayHomeUITests */,
 				FAB61373206DDF7500D55CC1 /* Products */,
+				E9D9A0C26C83E3442A1BD77E /* Pods */,
+				E73A58421B2C156ACBEE5D83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,9 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAB6139E206DDF7600D55CC1 /* Build configuration list for PBXNativeTarget "AliPayHome" */;
 			buildPhases = (
+				A8F8C690F0B2673244C1B049 /* [CP] Check Pods Manifest.lock */,
 				FAB6136E206DDF7500D55CC1 /* Sources */,
 				FAB6136F206DDF7500D55CC1 /* Frameworks */,
 				FAB61370206DDF7500D55CC1 /* Resources */,
+				AB593F5F221DB4EA47430958 /* [CP] Embed Pods Frameworks */,
+				BEB8DB9B0F143A3D804FB52E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAB613A1206DDF7600D55CC1 /* Build configuration list for PBXNativeTarget "AliPayHomeTests" */;
 			buildPhases = (
+				7725D3C7FFE013E589909326 /* [CP] Check Pods Manifest.lock */,
 				FAB61386206DDF7600D55CC1 /* Sources */,
 				FAB61387206DDF7600D55CC1 /* Frameworks */,
 				FAB61388206DDF7600D55CC1 /* Resources */,
+				5BD5F72004ED1E29F14A673D /* [CP] Embed Pods Frameworks */,
+				25491EF1BDD8EF32678435DC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,9 +261,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAB613A4206DDF7600D55CC1 /* Build configuration list for PBXNativeTarget "AliPayHomeUITests" */;
 			buildPhases = (
+				45C2A444C1E942732FAB376E /* [CP] Check Pods Manifest.lock */,
 				FAB61391206DDF7600D55CC1 /* Sources */,
 				FAB61392206DDF7600D55CC1 /* Frameworks */,
 				FAB61393206DDF7600D55CC1 /* Resources */,
+				0F3E8BA6CD0B5D379E446FC1 /* [CP] Embed Pods Frameworks */,
+				BE634B6402B7C4A54ED1F1B9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,6 +352,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F3E8BA6CD0B5D379E446FC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AliPayHomeUITests/Pods-AliPayHomeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25491EF1BDD8EF32678435DC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AliPayHomeTests/Pods-AliPayHomeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45C2A444C1E942732FAB376E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AliPayHomeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BD5F72004ED1E29F14A673D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AliPayHomeTests/Pods-AliPayHomeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7725D3C7FFE013E589909326 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AliPayHomeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8F8C690F0B2673244C1B049 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AliPayHome-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB593F5F221DB4EA47430958 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AliPayHome/Pods-AliPayHome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE634B6402B7C4A54ED1F1B9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AliPayHomeUITests/Pods-AliPayHomeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEB8DB9B0F143A3D804FB52E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AliPayHome/Pods-AliPayHome-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AliPayHome/Pods-AliPayHome-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAB6136E206DDF7500D55CC1 /* Sources */ = {
@@ -478,6 +677,7 @@
 		};
 		FAB6139F206DDF7600D55CC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D2E01E6B25F54153D35AE76 /* Pods-AliPayHome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -495,6 +695,7 @@
 		};
 		FAB613A0206DDF7600D55CC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3D314B6BF7EA912BBBF713F /* Pods-AliPayHome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -512,6 +713,7 @@
 		};
 		FAB613A2206DDF7600D55CC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F86BA46E7CB5470D41EB1F5B /* Pods-AliPayHomeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +729,7 @@
 		};
 		FAB613A3206DDF7600D55CC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CE669DFFB594F65CD347715 /* Pods-AliPayHomeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -542,6 +745,7 @@
 		};
 		FAB613A5206DDF7600D55CC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B25E5D2551F7479DC235302D /* Pods-AliPayHomeUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4E6298X77;
@@ -556,6 +760,7 @@
 		};
 		FAB613A6206DDF7600D55CC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A0B9441E16BD5D4B6F1E81C /* Pods-AliPayHomeUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4E6298X77;

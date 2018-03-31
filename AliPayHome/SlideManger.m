@@ -68,11 +68,11 @@ static SlideManger * _slideManger = nil;
         CGFloat slideY = slide + _navBottmView.height + _tabHeader.height;
         NSLog(@"******%f",slideY);
         if (slideY > 0) {
-            if (slideY >= _customNav.height/2 && slideY < _customNav.height) {
+            if (slideY >= _navBottmView.height/2 && slideY < _navBottmView.height) {
                 //自动滑到上面
                 //            [scrollView scrollRectToVisible:CGRectMake(0, 0, 0, 0) animated:YES];
                 [scrollView setContentOffset:CGPointMake(0, -_tabHeader.height) animated:YES];
-            } else if (slideY < _customNav.height/2) {
+            } else if (slideY < _navBottmView.height/2) {
                 //自动滑下去
                 [scrollView setContentOffset:CGPointMake(0, -(_navBottmView.height + _tabHeader.height)) animated:YES];
             }
