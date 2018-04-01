@@ -22,7 +22,7 @@
     _tableView = tableView;
     UIPanGestureRecognizer * pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handPanAction:)];
 //    self.userInteractionEnabled = NO;
-    [self addGestureRecognizer:pan];
+//    [self addGestureRecognizer:pan];
     
 //    UISwipeGestureRecognizer *down = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipes:)];
 //    down.direction=UISwipeGestureRecognizerDirectionDown;
@@ -42,6 +42,9 @@
 //    CGPoint point = [gen translationInView:pan.view];
 //
 //    NSLog(@"向下");
+//}
+//- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    [self.nextResponder touchesMoved:touches withEvent:event];
 //}
 - (void)handPanAction:(UIPanGestureRecognizer *)pan {
     CGPoint point = [pan translationInView:pan.view];
@@ -73,7 +76,6 @@
             break;
     }
 }
-
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

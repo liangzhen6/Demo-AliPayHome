@@ -11,6 +11,6 @@
 @interface TabHeaderView : UIScrollView
 + (id)tabHeaderView;
 
-- (void)handleanGesture:(UITableView *)tableView;
+//- (void)handleanGesture:(UITableView *)tableView;
 
 @end
