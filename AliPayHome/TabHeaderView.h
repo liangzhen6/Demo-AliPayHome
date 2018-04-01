@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TabHeaderView : UIScrollView
+@interface TabHeaderView : UIView
 + (id)tabHeaderView;
-
-//- (void)handleanGesture:(UITableView *)tableView;
 
 @end

@@ -30,7 +30,9 @@
     _cardView.alpha = alpha;
 }
 
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"点击了自定义nav下边的 扫一扫 付钱 收款 卡包等");
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

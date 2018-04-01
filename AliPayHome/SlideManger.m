@@ -12,6 +12,8 @@
 #import "NavBarBottomView.h"
 @interface SlideManger ()<NSCopying, NSMutableCopying>
 @property(nonatomic,weak)NavBarBottomView * navBottmView;
+@property(nonatomic,weak)NavBarBottomView * navBAView;
+
 @property(nonatomic,weak)UIView * tabHeader;
 @property(nonatomic,weak)CustrmNav * customNav;
 
@@ -40,7 +42,7 @@ static SlideManger * _slideManger = nil;
     return _slideManger;
 }
 
-- (void)slideMangerCustomNav:(UIView *)customNav navBottm:(UIView *)navBottmView tabHeader:(UIView *)tabHeader {
+- (void)slideMangerCustomNav:(UIView *)customNav navBottm:(UIView *)navBottmView tabHeader:(UIView *)tabHeader navBottomActionView:(UIView *)navBAView; {
     if (navBottmView) {
         _navBottmView = (NavBarBottomView *)navBottmView;
     }
@@ -49,6 +51,9 @@ static SlideManger * _slideManger = nil;
     }
     if (customNav) {
         _customNav = (CustrmNav *)customNav;
+    }
+    if (navBAView) {
+        _navBAView = (NavBarBottomView *)navBAView;
     }
 }
 //滑动的时候
@@ -66,11 +71,9 @@ static SlideManger * _slideManger = nil;
     if (_navBottmView && _tabHeader) {
         //得到真实的偏移量
         CGFloat slideY = slide + _navBottmView.height + _tabHeader.height;
-        NSLog(@"******%f",slideY);
         if (slideY > 0) {
             if (slideY >= _navBottmView.height/2 && slideY < _navBottmView.height) {
                 //自动滑到上面
-                //            [scrollView scrollRectToVisible:CGRectMake(0, 0, 0, 0) animated:YES];
                 [scrollView setContentOffset:CGPointMake(0, -_tabHeader.height) animated:YES];
             } else if (slideY < _navBottmView.height/2) {
                 //自动滑下去
@@ -79,15 +82,23 @@ static SlideManger * _slideManger = nil;
         }
     }
 }
-
 //处理 TabHeader 跟随 tableView 滑动
 - (void)handleTabHeader:(CGFloat)slide {
-    if (slide >= 0) {
-        _tabHeader.y = _customNav.height + _navBottmView.height - slide;
+  static BOOL isDown = NO;
+    if (slide <= 0) {
+        _navBAView.hidden = NO;
+        _navBottmView.hidden = YES;
+        _tabHeader.y = -_tabHeader.height + slide;
+        _navBAView.y = -(_navBottmView.height + _tabHeader.height) + slide;
+        isDown = YES;
     } else {
-        _tabHeader.y = _customNav.height + _navBottmView.height;
+        _navBAView.hidden = YES;
+        _navBottmView.hidden = NO;
+        if (isDown) {
+            _tabHeader.y = -_tabHeader.height;
+            isDown = NO;
+        }
     }
-    
 }
 //处理customnav  的渐变色问题 以及navbottom 的位置 渐变色问题
 - (void)handleCustomNavNavBottom:(CGFloat)slide {
@@ -107,6 +118,5 @@ static SlideManger * _slideManger = nil;
         _navBottmView.y = _customNav.height;
     }
 }
-
 
 @end

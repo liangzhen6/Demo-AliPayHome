@@ -11,7 +11,7 @@
 @interface SlideManger : NSObject
 + (id)shareSlideManger;
 
-- (void)slideMangerCustomNav:(UIView *)customNav navBottm:(UIView *)navBottmView tabHeader:(UIView *)tabHeader;
+- (void)slideMangerCustomNav:(UIView *)customNav navBottm:(UIView *)navBottmView tabHeader:(UIView *)tabHeader navBottomActionView:(UIView *)navBAView;
 
 - (void)tableViewSlide:(CGFloat)slide;
 
