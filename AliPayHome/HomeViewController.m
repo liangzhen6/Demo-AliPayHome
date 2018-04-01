@@ -80,8 +80,6 @@
     MJRefreshNormalHeader *mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self refershAction];
     }];
-    mj_header.backgroundColor = [UIColor redColor];
-    NSLog(@"%@",mj_header);
     _tableView.mj_header = mj_header;
 
     [[SlideManger shareSlideManger] slideMangerCustomNav:nav navBottm:navBottom tabHeader:tabHeader];
