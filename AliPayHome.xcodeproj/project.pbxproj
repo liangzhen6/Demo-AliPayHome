@@ -141,6 +141,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FA2E655B20720EE500A70814 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				FA27DA9A206E293800A4BB2D /* UIView+MSExtension.h */,
+				FA27DA9B206E293800A4BB2D /* UIView+MSExtension.m */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		FA2E655C20720F0500A70814 /* view&&manger */ = {
+			isa = PBXGroup;
+			children = (
+				FA27DA9D206E33A700A4BB2D /* CustrmNav.h */,
+				FA27DA9E206E33A700A4BB2D /* CustrmNav.m */,
+				FA27DAA0206E33B400A4BB2D /* CustrmNav.xib */,
+				FA27DAA7206E58CF00A4BB2D /* TabHeaderView.h */,
+				FA27DAA8206E58CF00A4BB2D /* TabHeaderView.m */,
+				FA27DAAA206E58D800A4BB2D /* TabHeaderView.xib */,
+				FA27DAA2206E4F8D00A4BB2D /* NavBarBottomView.h */,
+				FA27DAA3206E4F8D00A4BB2D /* NavBarBottomView.m */,
+				FA27DAA5206E4F9700A4BB2D /* NavBarBottomView.xib */,
+				FA27DAAC206E62DE00A4BB2D /* SlideManger.h */,
+				FA27DAAD206E62DE00A4BB2D /* SlideManger.m */,
+			);
+			path = "view&&manger";
+			sourceTree = "<group>";
+		};
 		FAB61369206DDF7500D55CC1 = {
 			isa = PBXGroup;
 			children = (
@@ -168,23 +195,12 @@
 			children = (
 				FAB61375206DDF7500D55CC1 /* AppDelegate.h */,
 				FAB61376206DDF7500D55CC1 /* AppDelegate.m */,
-				FA27DA9A206E293800A4BB2D /* UIView+MSExtension.h */,
-				FA27DA9B206E293800A4BB2D /* UIView+MSExtension.m */,
-				FA27DAAC206E62DE00A4BB2D /* SlideManger.h */,
-				FA27DAAD206E62DE00A4BB2D /* SlideManger.m */,
+				FA2E655B20720EE500A70814 /* Library */,
+				FA2E655C20720F0500A70814 /* view&&manger */,
 				FAB613A7206DE27500D55CC1 /* HomeViewController.h */,
 				FAB613A8206DE27500D55CC1 /* HomeViewController.m */,
-				FA27DAA7206E58CF00A4BB2D /* TabHeaderView.h */,
-				FA27DAA8206E58CF00A4BB2D /* TabHeaderView.m */,
-				FA27DAAA206E58D800A4BB2D /* TabHeaderView.xib */,
-				FA27DAA2206E4F8D00A4BB2D /* NavBarBottomView.h */,
-				FA27DAA3206E4F8D00A4BB2D /* NavBarBottomView.m */,
-				FA27DAA5206E4F9700A4BB2D /* NavBarBottomView.xib */,
 				FAB613AA206DE29000D55CC1 /* OtherViewController.h */,
 				FAB613AB206DE29000D55CC1 /* OtherViewController.m */,
-				FA27DA9D206E33A700A4BB2D /* CustrmNav.h */,
-				FA27DA9E206E33A700A4BB2D /* CustrmNav.m */,
-				FA27DAA0206E33B400A4BB2D /* CustrmNav.xib */,
 				FAB6137B206DDF7500D55CC1 /* Main.storyboard */,
 				FAB6137E206DDF7600D55CC1 /* Assets.xcassets */,
 				FAB61380206DDF7600D55CC1 /* LaunchScreen.storyboard */,

@@ -36,13 +36,13 @@
 
 - (void)initView {
     CustrmNav * nav = [CustrmNav custrmNav];
-    
+    //navBShadowView 背后不响应事件，只是上划的时候显示
+    NavBarBottomView * navBShadowView = [NavBarBottomView navBarBottomView];
+    navBShadowView.frame = CGRectMake(0, CGRectGetMaxY(nav.frame), Screen_Width, 80);
+    [self.view addSubview:navBShadowView];
+    //navBottom 响应事件，在滑动 tableView下滑动到0以后出现
     NavBarBottomView * navBottom = [NavBarBottomView navBarBottomView];
-    navBottom.frame = CGRectMake(0, CGRectGetMaxY(nav.frame), Screen_Width, 80);
-    [self.view addSubview:navBottom];
-    
-    NavBarBottomView * navBottomAction = [NavBarBottomView navBarBottomView];
-    navBottomAction.frame = CGRectMake(0, -320, Screen_Width, 80);
+    navBottom.frame = CGRectMake(0, -320, Screen_Width, 80);
     
     TabHeaderView * tabHeader = [TabHeaderView tabHeaderView];
     tabHeader.frame = CGRectMake(0, -240, Screen_Width, 240);
@@ -65,7 +65,7 @@
     //背景透明
     _tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_tableView];
-    [_tableView addSubview:navBottomAction];
+    [_tableView addSubview:navBottom];
     [_tableView addSubview:tabHeader];
     //放在顶层的 nav 应在在最外层的view
     [self.view addSubview:nav];
@@ -75,7 +75,7 @@
     }];
     _tableView.mj_header = mj_header;
     
-    [[SlideManger shareSlideManger] slideMangerCustomNav:nav navBottm:navBottom tabHeader:tabHeader navBottomActionView:navBottomAction];
+    [[SlideManger shareSlideManger] slideMangerCustomNav:nav navBottm:navBottom tabHeader:tabHeader navBottomShadowView:navBShadowView];
 }
 - (void)refershAction {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
