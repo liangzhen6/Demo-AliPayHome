@@ -60,7 +60,7 @@ static SlideManger * _slideManger = nil;
 //滑动的时候
 - (void)tableViewSlide:(CGFloat)slide {
     if (_navBShadowView && _tabHeader) {
-        //得到真实的偏移量
+        //得到真实的偏移量，让slideY从0开始算起
         CGFloat slideY = slide + _navBShadowView.height + _tabHeader.height;
 //        NSLog(@"******%f",slideY);
         [self handleTabHeader:slideY];
@@ -89,6 +89,7 @@ static SlideManger * _slideManger = nil;
     if (slide <= 0) {
         _navBottmView.hidden = NO;
         _navBShadowView.hidden = YES;
+        //tableView往下滑的时候，禁止 _tabHeader与_navBottmView一起下滑
         _tabHeader.y = -_tabHeader.height + slide;
         _navBottmView.y = -(_navBShadowView.height + _tabHeader.height) + slide;
         isDown = YES;
